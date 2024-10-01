@@ -151,6 +151,11 @@ conda create -n repeatmodeler
 conda activate repeatmodeler
 conda install bioconda::mafft
 ```
+Building the link, so RepeatModeler `configure` program can find the mafft:
+```sh
+ln -sf ~/miniconda3/envs/repeatmodeler/bin/ MAFFT
+```
+
 #### CD-HIT
 ```sh
 cd ~/software/RepeatModeler/
@@ -184,7 +189,37 @@ your system.  Please install these first:
     Devel::Size
 ```
 So, we must be installing these perl modules in advance:
-Enter interactive cpan installation mode
+#### Non-root installation of perl and perl-modules
+`perl`
+```sh
+wget https://www.cpan.org/src/5.0/perl-5.40.0.tar.gz
+tar -zxvf perl-5.40.0.tar.gz
+cd ~/software/perl-5.40.0
+```
+Following the prompt to complete the installation.
+```sh
+make -help
+./Configure -des -Dprefix=~/software/perl-5.40.0 -Dusethreads
+```
+Don't forget to point to your own Perl installation in `.bashrc` or another configuration file.
+Enter interactive cpan installation mode.
+```sh
+perl -MCPAN -e shell
+```
+Installing required modules by interactive cpan:
+```perl
+install JSON
+install File::Which
+install Devel::Size
+```
+#### done
+Now, install it!
+```shell
+cd ~/software/RepeatModeler/RepeatModeler-master
+perl ./configure
+# remember to change the `.bashrc`
+```
+Done!
 
 
 
