@@ -72,7 +72,7 @@ make
 Done!
 #### rmblast
 ```sh
-cd ~/software/RepeatMdeler
+cd ~/software/RepeatModeler
 wget https://www.repeatmasker.org/rmblast/rmblast-2.14.1+-x64-linux.tar.gz
 tar -xzvf rmblast-2.14.1+-x64-linux.tar.gz
 # remember to change the `.bashrc`
