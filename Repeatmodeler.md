@@ -77,7 +77,7 @@ wget https://www.repeatmasker.org/rmblast/rmblast-2.14.1+-x64-linux.tar.gz
 tar -xzvf rmblast-2.14.1+-x64-linux.tar.gz
 # remember to change the `.bashrc`
 ```
-#### RepeatModeler
+#### RepeatMasker
 ```sh
 wget https://www.repeatmasker.org/RepeatMasker/RepeatMasker-4.1.7-p1.tar.gz
 tar -xzvf RepeatMasker-4.1.7-p1.tar.gz
