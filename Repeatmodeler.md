@@ -5,8 +5,8 @@ RepeatModeler is a frequently-used tool in genome annotation, but the intallatio
 ### 1 RepeatMasker
 #### TRF
 ```sh
-mkdir Repeatmodeler
-cd Repeatmodeler
+mkdir RepeatModeler
+cd RepeatModeler
 git clone https://github.com/Benson-Genomics-Lab/TRF.git
 cd TRF;mkdir build
 cd build
@@ -72,7 +72,7 @@ make
 Done!
 #### rmblast
 ```sh
-cd ~/software/Repeatmodeler
+cd ~/software/RepeatMdeler
 wget https://www.repeatmasker.org/rmblast/rmblast-2.14.1+-x64-linux.tar.gz
 tar -xzvf rmblast-2.14.1+-x64-linux.tar.gz
 # remember to change the `.bashrc`
@@ -99,7 +99,7 @@ perl ./configure
 
 ### 2 RECON
 ```sh
-cd ~/software/Repeatmodeler
+cd ~/software/RepeatModeler
 wget http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz
 tar -xzvf RECON-1.08.tar.gz
 cd RECON-1.08/src/
