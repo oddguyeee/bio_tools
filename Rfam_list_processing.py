@@ -20,7 +20,7 @@ def process_file(input_file, output_file):
             line = line.strip()  # Remove leading and trailing whitespace
 
             # Split line into components and retain only the first three columns
-            words = line.split(maxsplit=2)
+            words = line.split(None, 2)
 
             # Assign the first and second components to col1 and col2
             col1 = words[0]
@@ -54,7 +54,7 @@ def process_file(input_file, output_file):
                 col4 = ""
 
             # Write the formatted output to the output file
-            outfile.write(f"{col1}\t{col2}\t{col3}\t{col4}\n")
+            outfile.write("{}\t{}\t{}\t{}\n".format(col1, col2, col3, col4))
 
 
 def main():
