@@ -4,7 +4,7 @@ import argparse
 
 # Author: oddguyeee
 # Description: This script processes an Rfam list to adapt the ncRNA annotation.
-# Usage: python script_name.py -i input.txt -o output.txt
+# Usage: python Rfam_list_processing.py -i input.txt -o output.txt
 
 def process_file(input_file, output_file):
     """
