@@ -79,3 +79,15 @@ plotComponents(
 
 # 关闭 PDF 设备
 dev.off()
+
+
+library(ggplot2)
+
+
+p2 <- ggplot(x, aes(x = ks_median)) +
+  geom_density(color = "darkblue", fill = "lightblue", alpha = 0.5)
+
+
+pdf("basedist.pdf", width = 8, height = 6)
+p2
+dev.off()
