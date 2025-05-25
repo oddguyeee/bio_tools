@@ -1,3 +1,4 @@
+```
 setwd("E:/Li/flower_color/wgd/Ks_plots-master/")
 
 r_files <- list.files(pattern = "\\.R$")
@@ -6,7 +7,6 @@ r_files <- list.files(pattern = "\\.R$")
 for (file in r_files) {
   source(file)
 }
-
 x <- read.table("Pflo.ksNG86",header = T)
 
 ks_NG86 <- x$ks_NG86
@@ -91,3 +91,4 @@ p2 <- ggplot(x, aes(x = ks_median)) +
 pdf("basedist.pdf", width = 8, height = 6)
 p2
 dev.off()
+```
