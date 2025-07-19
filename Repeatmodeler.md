@@ -79,19 +79,26 @@ tar -xzvf rmblast-2.14.1+-x64-linux.tar.gz
 ```
 #### RepeatMasker
 ```sh
-wget https://www.repeatmasker.org/RepeatMasker/RepeatMasker-4.1.7-p1.tar.gz
-tar -xzvf RepeatMasker-4.1.7-p1.tar.gz
+wget https://www.repeatmasker.org/RepeatMasker/RepeatMasker-4.2.0.tar.gz
+gunzip RepeatMasker-4.2.0.tar.gz
+tar xvf RepeatMasker-4.2.0.tar
 ```
 Configure the libraries of `Dfam` and `Repbase`:
 ```sh
-# Dfam
-cd RepeatMasker/Libraries
-wget https://www.dfam.org/releases/Dfam_3.8/families/Dfam-RepeatMasker.lib.gz
-gunzip Dfam-RepeatMasker.lib.gz
-
 # Repbase, this lib is paid, please subscribe and download on your own
+# Repbase could be invoke error for merging famDB libraries!!!!!!!!!!!!!!!!!!!!
+cp RepBaseRepeatMaskerEdition-20181026.tar ./RepeatMasker/
+cd RepeatMasker
+tar xvf RepBaseRepeatMaskerEdition-20181026.tar
+rm RepBaseRepeatMaskerEdition-20181026.tar
 
-cd ..
+# Dfam
+cd /public/home/liusuguo/softwares/RepeatModeler
+cp ./dfam39_full.* ./RepeatMasker/Libraries/famdb
+cd ./RepeatMasker/Libraries/famdb
+gunzip dfam39_full.5.h5.gz
+
+cd /public/home/liusuguo/softwares/RepeatModeler/RepeatMasker
 perl ./configure
 
 # remember to change the `.bashrc`
