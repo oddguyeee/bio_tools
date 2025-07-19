@@ -107,7 +107,7 @@ perl ./configure
 ### 2 RECON
 ```sh
 cd ~/software/RepeatModeler
-wget http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz
+wget http://www.repeatmasker.org/RECON-1.08.tar.gz
 tar -xzvf RECON-1.08.tar.gz
 cd RECON-1.08/src/
 make
