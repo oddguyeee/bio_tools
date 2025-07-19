@@ -143,13 +143,14 @@ cd ~/software/RepeatModeler/
 wget https://genometools.org/pub/genometools-1.6.2.tar.gz
 tar -zxvf genometools-1.6.2.tar.gz
 cd genometools-1.6.2/
+make threads=yes
 # remember to change the `.bashrc`
 ```
 #### Ltr_retriever
 ```sh
 cd ~/software/RepeatModeler/
 wget https://github.com/oushujun/LTR_retriever/archive/refs/tags/v3.0.1.tar.gz
-tar -zxvf tar -zxvf LTR_retriever-3.0.1.tar.gz
+tar -zxvf LTR_retriever-3.0.1.tar.gz
 # remember to change the `.bashrc`
 ```
 #### MAFFT
